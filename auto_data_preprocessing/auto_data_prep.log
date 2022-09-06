@@ -1,0 +1,56 @@
+06-09-2022 19:07:04.04 - INFO - Started fields assignments...
+06-09-2022 19:07:04.04 - INFO - Turning certain flag fields into ones and zeros...
+06-09-2022 19:07:04.04 - INFO - Telephone changed...
+06-09-2022 19:07:04.05 - INFO - ForeignWorker changed...
+06-09-2022 19:07:04.06 - INFO - Numerical columns: ['LoanDuration', 'LoanAmount', 'InstallmentPercent', 'CurrentResidenceDuration', 'Age', 'ExistingCreditsCount', 'Dependents'] 
+06-09-2022 19:07:04.06 - INFO - Flag columns: ['Telephone', 'ForeignWorker'] 
+06-09-2022 19:07:04.06 - INFO - Categorical columns: ['CreditHistory', 'Housing', 'Job', 'OthersOnLoan', 'Risk', 'LoanPurpose', 'OwnsProperty', 'ExistingSavings', 'InstallmentPlans', 'CheckingStatus', 'EmploymentDuration', 'Sex'] 
+06-09-2022 19:07:04.06 - INFO - Completed rescaling numerical fields in 0.020232 seconds
+06-09-2022 19:07:04.06 - INFO - Started validation of input parameters...
+06-09-2022 19:07:04.06 - INFO - Completed validation of input parameters
+06-09-2022 19:07:04.06 - INFO - Started excluding fields...
+06-09-2022 19:07:04.06 - INFO - Numerical columns: ['LoanDuration', 'LoanAmount', 'InstallmentPercent', 'CurrentResidenceDuration', 'Age', 'ExistingCreditsCount', 'Dependents'] 
+06-09-2022 19:07:04.06 - INFO - Categorical columns: ['CreditHistory', 'Housing', 'Job', 'OthersOnLoan', 'Risk', 'LoanPurpose', 'OwnsProperty', 'ExistingSavings', 'InstallmentPlans', 'CheckingStatus', 'EmploymentDuration', 'Sex'] 
+06-09-2022 19:07:04.09 - INFO - Numerical columns after field exclusion: ['InstallmentPercent', 'Dependents', 'CurrentResidenceDuration', 'LoanAmount', 'ExistingCreditsCount', 'Age', 'LoanDuration'] 
+06-09-2022 19:07:04.09 - INFO - Categorical columns after field exclusion: ['CreditHistory', 'Housing', 'Job', 'OthersOnLoan', 'Risk', 'LoanPurpose', 'OwnsProperty', 'ExistingSavings', 'InstallmentPlans', 'CheckingStatus', 'EmploymentDuration', 'Sex'] 
+06-09-2022 19:07:04.09 - INFO - Completed excluding fields in 0.028784 seconds
+06-09-2022 19:07:04.09 - INFO - Started handling of outliers...
+06-09-2022 19:07:04.09 - INFO - Isolation Forest algorithm started the detection...
+06-09-2022 19:07:04.62 - DEBUG - Outlier Detection: 14 value(s) found for feature "LoanDuration"
+06-09-2022 19:07:05.20 - DEBUG - Outlier Detection: 14 value(s) found for feature "LoanAmount"
+06-09-2022 19:07:05.66 - DEBUG - Outlier Detection: 0 value(s) found for feature "InstallmentPercent"
+06-09-2022 19:07:06.09 - DEBUG - Outlier Detection: 3 value(s) found for feature "CurrentResidenceDuration"
+06-09-2022 19:07:06.62 - DEBUG - Outlier Detection: 12 value(s) found for feature "Age"
+06-09-2022 19:07:07.02 - DEBUG - Outlier Detection: 1 value(s) found for feature "ExistingCreditsCount"
+06-09-2022 19:07:07.40 - DEBUG - Outlier Detection: 0 value(s) found for feature "Dependents"
+06-09-2022 19:07:07.40 - INFO - Isolation Forest algorithm finished the detection...
+06-09-2022 19:07:07.41 - INFO - Completed handling of outliers in 3.31904 seconds
+06-09-2022 19:07:07.41 - INFO - Started handling of missing values...
+06-09-2022 19:07:07.42 - INFO - Found a total of 44 missing value(s)
+06-09-2022 19:07:07.43 - INFO - Started handling missing values... 
+06-09-2022 19:07:07.44 - DEBUG - KNN imputation of 14 value(s) succeeded for feature "LoanDuration"
+06-09-2022 19:07:07.45 - DEBUG - KNN imputation of 14 value(s) succeeded for feature "LoanAmount"
+06-09-2022 19:07:07.46 - DEBUG - KNN imputation of 3 value(s) succeeded for feature "CurrentResidenceDuration"
+06-09-2022 19:07:07.47 - DEBUG - KNN imputation of 12 value(s) succeeded for feature "Age"
+06-09-2022 19:07:07.47 - DEBUG - KNN imputation of 1 value(s) succeeded for feature "ExistingCreditsCount"
+06-09-2022 19:07:07.47 - INFO - Completed handling of missing values in 0.065327 seconds
+06-09-2022 19:07:07.47 - INFO - Started handling of duplicates... Method: deletion
+06-09-2022 19:07:07.49 - DEBUG - Deletion of 18 duplicate(s) succeeded
+06-09-2022 19:07:07.49 - INFO - Completed handling of duplicates in 0.012264 seconds
+06-09-2022 19:07:07.49 - INFO - Started rescaling numerical fields...
+06-09-2022 19:07:07.53 - INFO - Completed rescaling numerical fields in 0.037798 seconds
+06-09-2022 19:07:07.53 - INFO - Started encoding categorical features... Method: one-hot encoding
+06-09-2022 19:07:07.53 - DEBUG - Encoding to ONEHOT succeeded for feature "CreditHistory"
+06-09-2022 19:07:07.54 - DEBUG - Encoding to ONEHOT succeeded for feature "Housing"
+06-09-2022 19:07:07.54 - DEBUG - Encoding to ONEHOT succeeded for feature "Job"
+06-09-2022 19:07:07.54 - DEBUG - Encoding to ONEHOT succeeded for feature "OthersOnLoan"
+06-09-2022 19:07:07.55 - DEBUG - Encoding to ONEHOT succeeded for feature "Risk"
+06-09-2022 19:07:07.55 - WARNING - Encoding failed for feature "LoanPurpose"
+06-09-2022 19:07:07.55 - DEBUG - Encoding to ONEHOT succeeded for feature "OwnsProperty"
+06-09-2022 19:07:07.56 - DEBUG - Encoding to ONEHOT succeeded for feature "ExistingSavings"
+06-09-2022 19:07:07.56 - DEBUG - Encoding to ONEHOT succeeded for feature "InstallmentPlans"
+06-09-2022 19:07:07.57 - DEBUG - Encoding to ONEHOT succeeded for feature "CheckingStatus"
+06-09-2022 19:07:07.57 - DEBUG - Encoding to ONEHOT succeeded for feature "EmploymentDuration"
+06-09-2022 19:07:07.58 - DEBUG - Encoding to ONEHOT succeeded for feature "Sex"
+06-09-2022 19:07:07.58 - INFO - Completed encoding of categorical features in 0.050536 seconds
+06-09-2022 19:07:07.58 - INFO - AutoDataPrep process completed in 3.540463 seconds
