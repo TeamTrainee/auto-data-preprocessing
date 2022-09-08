@@ -3,13 +3,15 @@
 
 As Data & AI interns at IBM Turkey, we prepared an automated data preprocessing tool using Python programming language. The sequential procedures applied to the input data are:
 
+* **Imbalanced fields**: Detecting imbalanced columns
+* **Exploratory data analysis (EDA)**: Explores column distributions, correlations and pair plots
 * **Field assignment**: Detecting numeric columns, categorical columns and flags
-* **Missing value imputation**: Filling missing values using KNN clustring algorithm
-* **Outliers**: Detecting & deleting outliers from each numerical column using Isolation forest
-* **Duplicate Values**: Removing identical rows
-* **Excluding Fields**: Removing columns with
+* **Excluding fields**: Removing columns with
    * more than 50% of missing values
    * constant values
    * more than 90% unique values (for categorical columns) 
-* **Rescaling Fields**: Rescaling all numeric columns
-* **Feature Encoding**: Applying one-hot encoding to categorical features
+* **Outliers**: Detecting & deleting outliers from each numerical column using Isolation forest
+* **Missing values**: Filling missing values using KNN algorithm
+* **Duplicate values**: Removing identical rows
+* **Rescaling fields**: Rescaling all numeric columns
+* **Feature encoding**: Applying one-hot encoding to categorical features
