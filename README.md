@@ -1,21 +1,17 @@
 # Auto Data Preprocessing
 ## Building an Auto Data Preprocessing Tool
 
-+ Field assignment: Detecting numeric columns, caegorical columns and flags
+As Data & AI interns at IBM Turkey, we prepared an automated data preprocessing tool using Python programming language. The sequential procedures applied to the input data are:
 
-+ Missing values: Filling missing values using KNN clustring algorithm
-
-+ Outliers: Detecting & Deleting outliers from each numerical column using Isolation forest
-
-+ Duplicate Values: Removing identical rows
-
-+ Excluding fields: Removing fields if
-
-   * fields with more than 50% of missing values
-  
-   * fields with constant values
-        
-   * categorical fields with more than 90% unique values
-        
-+ Rescale Fields: Rescaling all numeric columns
-+ Feature Encoding: Appliyng one-hot encoding to categorical features
+* **Imbalanced fields**: Detecting imbalanced columns
+* **Exploratory data analysis (EDA)**: Explores column distributions, correlations and pair plots
+* **Field assignment**: Detecting numeric columns, categorical columns and flags
+* **Excluding fields**: Removing columns with
+   * more than 50% of missing values
+   * constant values
+   * more than 90% unique values (for categorical columns) 
+* **Outliers**: Detecting & deleting outliers from each numerical column using Isolation forest
+* **Missing values**: Filling missing values using KNN algorithm
+* **Duplicate values**: Removing identical rows
+* **Rescaling fields**: Rescaling all numeric columns
+* **Feature encoding**: Applying one-hot encoding to categorical features
