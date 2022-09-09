@@ -45,7 +45,7 @@ $ ipython
 %run main.ipynb                                      
 ````
 
-### Step 2: Basic Usage
+### Step 2: Process your data
 AutoDataPrep takes the file path of a `.csv` file as an input from the console. 
 
 It automatically detects columns with imbalanced distributions and asks whether to keep this column or to remove it. 
