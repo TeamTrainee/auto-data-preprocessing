@@ -30,6 +30,7 @@ AutoDataPrep consists of Jupyter Notebook files with the extension `.ipynb`. The
 ````console
 $ cd auto_data_preprocessing
 $ ls
+
 AutoDataPrep.ipynb                      Encoding.ipynb                       main.ipynb
 Duplicates.ipynb                        MissingValues.ipynb                  Rescale.ipynb
 EDA.ipynb                               Outliers.ipynb                       ...        
@@ -40,7 +41,7 @@ EDA.ipynb                               Outliers.ipynb                       ...
 $ ipython                                       
 ````
 3. Within the interactive **IPython** shell, run "main.ipynb" file
-````console
+````
 %run main.ipynb                                      
 ````
 
@@ -52,27 +53,28 @@ It automatically detects columns with imbalanced distributions and asks whether 
 > Imbalanced data can cause overfitting or loss of important information about the dataset. Therefore, if they are not highly significant in the context of your data, the removal of these columns are suggested.
 
 Three different file types are given as output:
-**`.csv`** file containing the processed input data
 
-**`.log`** file recording the preprocessing details
+`.csv` file containing the processed input data 
 
-**`.png`** files storing the visuals from Exploratory Data Analysis (EDA)
+`.log` file recording the preprocessing details
+
+`.png` files storing the visuals from Exploratory Data Analysis (EDA)
 
 ### Example
 You can run the program on the given datasets to see an example execution.
-````console
+````
 Enter the file path to be processed: german_credit_data.csv
 ````
-````console
+````
 'ForeignWorker' feature is imbalanced with 97% of its entries containing the value: yes.
 
 Enter 1 to remove ForeignWorker, 0 to keep it for further analysis: 1
 ````
-A column named 'ForeignWorker' was found to be inbalanced where 97% of the values in the column are 'yes'. When **1** is given as console input, AutoDataPrep will remove this column and start the preprocessing. 
+A column named 'ForeignWorker' was found to be inbalanced where 97% of the values in the column are 'yes'. When **1** is given as input, AutoDataPrep will remove this column and start the preprocessing. 
 
 Once complete, the following output is printed, showing the location of output files generated. 
 
-````console
+````
 AutoDataPrep process completed in 9.498508 seconds
 Exploratory data analysis visualizations are saved to .png files
 Logfile saved to: /../auto_data_preprocessing/auto_data_prep.log
